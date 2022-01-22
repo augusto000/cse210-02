@@ -3,4 +3,4 @@ director= Director()
 
 director.startgame()
 
-#director.startgame-capo!
+#director.startgame-capo!111111

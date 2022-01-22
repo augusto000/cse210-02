@@ -4,5 +4,4 @@ director= Director()
 
 director.startgame()
 
-#director.startgame-capo!111111#
-##################################
+#La vida es una moneda jaaaa

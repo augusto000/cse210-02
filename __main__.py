@@ -3,4 +3,4 @@ director= Director()
 
 director.startgame()
 
-
+#estamos un poco estresaditos jaa

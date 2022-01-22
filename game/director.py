@@ -8,7 +8,7 @@ class Director:
         for i in range(13):
             cards = Cards()
             self.cards.append(cards)
-        print("dentro del init de la Clase Director")
+        #print("dentro del init de la Clase Director")
            ### #print(f"Espacio en memoria  para la {i}° carta  ",self.cards[i])
     
     def startgame(self):

@@ -1,7 +1,7 @@
 import random
 
 class Cards:
-    def _init_(self):
+    def __init__(self):
         self.total_score=300
         self.lose_points= 75
         self.earn_points=100

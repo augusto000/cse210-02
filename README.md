@@ -1,5 +1,5 @@
 cse210-03 folder
-this directory contains the input file and the files containing the Directory and Card classes
+this folder contains the input file and the files containing the Director and Card classes.
 
 cse210-03 folder root  ---
                          !

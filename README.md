@@ -1,15 +1,28 @@
-# cse210-02
+cse210-03 folder
+this folder contains the input file and the files containing the Director and Card classes.
+
+cse210-03 folder root  ---
+                         !
+                         !___game --------
+                         !               !
+                         !               !_________ director
+                         !               !
+                         !               !_________ cards
+                         !
+                         !
+                         !____main__() (entry point)
+
+# cse210-03
 Team a:
 Julia, Iris, Cristian, Sean, Augusto
-__main__.py (entry point)
 
 Team Meeting :
 Each one has a part to develop:
-Sean: the last 3 point.
 
 days: Tuesday, Thursday, Saturday somtimes.
 Thursday Sean: 10am (Idaho) MST - Argentina 2pm
 
+Portions assignments:
 The player starts the game with 300 points.( Augusto)
 Individual cards are represented as a number from 1 to 13.(Augusto)
 The current card is displayed.(Augusto)

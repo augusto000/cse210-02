@@ -4,6 +4,5 @@ from game.director import Director
 director = Director()
 #function startgame() is at the Director class
 director.startgame()
-##############
 
 

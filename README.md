@@ -10,7 +10,6 @@ cse210-03
     │   cards.py
     │   director.py
 ```
-
 ### **Team:**
 Julia, Iris, Cristian, Sean, Augusto
 

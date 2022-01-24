@@ -3,11 +3,23 @@ import time
 from game.cards import Cards
 
 class Director:
+    """A person who directs the game. 
     
+    The responsibility of a Director is to control the sequence of play.
+
+    Attributes:
+        cards (List[Card]):     A list of Card instances.
+        is_playing (boolean):   Whether or not the game is being played.
+        self.option=''
+        total_score (int):      Initial score user starts with.
+        lose_points (int):      Points deducted when user misguess.
+        earn_points (int):      Points added when user guesses correctly.
+    """
     def __init__(self):
         self.cards=[]
         self.is_playing=True
         self.option=''
+        
         #The player starts the game with 300 points.( -Augusto-)
         #This is the magic Score: )
         self.total_score=300
@@ -19,6 +31,9 @@ class Director:
             card = Cards()
             self.cards.append(card)
     
+    """startgame()
+    Initiate the loop which mantains the game running 
+    """
     def startgame(self):
         #startgame module Initialize the game.
         while self.is_playing:
@@ -51,8 +66,9 @@ class Director:
             if continue_option == "n":
                 self.check_if_lost("Thanks for playing!")
 
-
-    #create function to check if the user loses
+    """check_if_lost(string)
+    Display a message and end game 
+    """
     def check_if_lost(self, message):
         print()
         print(message)

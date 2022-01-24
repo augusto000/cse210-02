@@ -1,22 +1,26 @@
 from game.cards import Cards
+#class Director 
 class Director:
     
     def __init__(self):
         self.cards=[]
         self.is_playing=True
-
-        for i in range(13):
-            cards = Cards()
-            self.cards.append(cards)
+        #This loop is just in case it is needed and as an example. it loads rooms for a card object .
+        #for i in range(13):
+        #    cards = Cards()
+        #    self.cards.append(cards)
         #print("dentro del init de la Clase Director")
-           ### #print(f"Espacio en memoria  para la {i}° carta  ",self.cards[i])
+        ####print(f"Espacio en memoria  para la {i}° carta  ",self.cards[i])
     
     def startgame(self):
+        #startgame module Initialize the game.
         while self.is_playing:
+
             card = Cards()
             print("------------------------------")
             print()
             print()
+            #card.player_choice look for the choice of the player.
             print("The card is : ", card.player_choice())
 
             #Run check_if_lost function and see if game ends

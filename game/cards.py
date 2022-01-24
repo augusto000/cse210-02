@@ -1,7 +1,8 @@
 import random
 
 class Cards:
-    def _init_(self):
+    def __init__(self):
+        #The player starts the game with 300 points.( Augusto)
         self.total_score=300
         self.lose_points= 75
         self.earn_points=100
@@ -10,16 +11,30 @@ class Cards:
         self.number = 0
     
     def get_card_num(self):
+        #Individual cards are represented as a number from 1 to 13.(Augusto)
         # this function each time that is called return a 
         # random number(1 to 13)#
         self.number = random.randint(1, 13)
         return self.number   
 
     def player_choice(self):
-        #The player guesses if the next one will be higher or lower. (Julia)
-        self.previous_number = self.get_card_num()
+        '''
+        This lines below is a Sean 's suggestion .
+        if self.previous_number == 0:
+            self.previous_number = self.get_card_num()    
+        else:
+            self.previous_number = self.current_number    
+        '''
+        #The current card is displayed.(Augusto)
+        self.previous_number = self.get_card_num()###
         print("The Card is: ", self.previous_number)
         opt = input("Higher or Lower? [h/l] ")
+        '''
+             This lines below is a Sean 's suggestion . 
+             if opt != "h" or opt != "l":
+                 card.player.choice()
+
+        '''
         self.current_number = self.get_card_num()
         print("Next Card was: ",self.current_number)
         

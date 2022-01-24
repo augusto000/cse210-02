@@ -18,11 +18,11 @@ Julia, Iris, Cristian, Sean, Augusto
 Tuesday, Thursday, Saturday sometimes.
 
 ### **Portions assignments:**  
-  + ***Augusto:***  
+  + ***Augusto***  
   The player starts the game with 300 points. Individual cards are represented as a number from 1 to 13. The current card is displayed.
   + ***Julia***  
   The player guesses if the next one will be higher or lower. The next card is displayed.
-  + ***Iris***
+  + ***Iris***  
   The player earns 100 points if they guessed correctly.
   The player loses 75 points if they guessed incorrectly.
   + ***Sean***  

@@ -1,4 +1,5 @@
 from game.cards import Cards
+
 import time
 import copy
 
@@ -7,7 +8,6 @@ class Director:
     def __init__(self):
         self.cards=[]
         self.is_playing=True
-
         self.option=''
         self.total_score=300
         self.lose_points=75

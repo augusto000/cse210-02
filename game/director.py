@@ -39,7 +39,7 @@ class Director:
         
         print("Your Score is: ", self.total_score)
         if self.total_score <= 0:
-            self.finish_game("You lose!")
+            self.finish_game("You lost!")
 
         #move next card to current card
         self.cards[0] = self.cards[1]

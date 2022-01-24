@@ -1,4 +1,4 @@
-cse210-03 folder
+cse210-03 -  
 this folder contains the input file and the files containing the Director and Card classes.
 
 cse210-03 folder root  ---

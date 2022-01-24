@@ -2,11 +2,8 @@ import random
 
 class Cards:
     def __init__(self):
-<<<<<<< HEAD
-=======
         #The player starts the game with 300 points.( -Augusto-)
         #This is the magic Score: )
->>>>>>> RamaAugusto
         self.total_score=300
         self.lose_points= 75
         self.earn_points=100
@@ -44,7 +41,7 @@ class Cards:
         
         if  self.current_number > self.previous_number and opt == "h":
             self.total_score += self.earn_points
-            print("You win!")
+            #print("You win!")
             print("Your Score is: ", self.total_score)
         elif  self.current_number > self.previous_number and opt == "l":
             self.total_score -= self.lose_points
@@ -52,7 +49,7 @@ class Cards:
             print("Your Score is: ", self.total_score)
         elif  self.current_number < self.previous_number and opt == "l":
             self.total_score += self.earn_points
-            print("You win!")
+            #print("You win!")
             print("Your Score is: ", self.total_score)
         elif  self.current_number < self.previous_number and opt == "h":
             self.total_score -= self.lose_points

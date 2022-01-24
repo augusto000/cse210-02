@@ -2,6 +2,11 @@ import random
 
 class Cards:
     def __init__(self):
+<<<<<<< HEAD
+=======
+        #The player starts the game with 300 points.( -Augusto-)
+        #This is the magic Score: )
+>>>>>>> RamaAugusto
         self.total_score=300
         self.lose_points= 75
         self.earn_points=100

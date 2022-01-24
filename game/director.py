@@ -1,5 +1,6 @@
 from game.cards import Cards
 import time
+import copy
 
 class Director:
     
@@ -21,15 +22,17 @@ class Director:
         while self.is_playing:
             self.get_user_input()
             self.do_updates()
-    
+
     def get_user_input(self):
         print()
         print("The Card is: ", self.cards[0].number)
         self.option = input("Higher or Lower? [h/l] ")
 
     def do_updates(self):
-        #create second card
-        self.cards[1] = Cards()
+        #create next card different than the first
+        while self.cards[1].number == self.cards[0].number:
+            self.cards[1].shuffle()
+
         print("Next Card was: ", self.cards[1].number)
 
         if self.cards[0].number < self.cards[1].number and self.option == 'h' or self.cards[0].number > self.cards[1].number and self.option == 'l':
@@ -42,7 +45,7 @@ class Director:
             self.finish_game("You lost!")
 
         #move next card to current card
-        self.cards[0] = self.cards[1]
+        self.cards[0] = copy.deepcopy(self.cards[1])
 
         continue_option = input("Play again? [y/n] ")
         if continue_option == "n":
@@ -53,4 +56,4 @@ class Director:
         print(message)
         time.sleep(3)
         self.is_playing = False
-        return
+        exit()

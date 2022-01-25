@@ -20,7 +20,7 @@ Python 3.10
 ## **Team members info**
 | Name      | email | Assignments |
 | ----------- | ----------- | --------- |
-| Augusto Acha | Title | The player starts the game with 300 points. Individual cards are represented as a number from 1 to 13. The current card is displayed. |
+| Augusto Acha | augustoacha177@gmail.coms | The player starts the game with 300 points. Individual cards are represented as a number from 1 to 13. The current card is displayed. |
 | Julia García | Title | The player guesses if the next one will be higher or lower. The next card is displayed. |
 | Iris Ayala | Title | The player earns 100 points if they guessed correctly. The player loses 75 points if they guessed incorrectly. |
 | Sean Walker | Title | If a player reaches 0 points the game is over. If a player has more than 0 points they decide if they want to keep playing. If a player decides not to play again the game is over. |

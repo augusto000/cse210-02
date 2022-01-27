@@ -1,6 +1,5 @@
-import copy
 import time
-from game.cards import Cards
+from game.cardsDeck import CardsDeck
 
 class Director:
     """A person who directs the game. 
@@ -16,7 +15,7 @@ class Director:
         earn_points (int):      Points added when user guesses correctly.
     """
     def __init__(self):
-        self.cards=[]
+        self.cards= CardsDeck(2)
         self.is_playing=True
         self.option=''
         
@@ -25,11 +24,6 @@ class Director:
         self.total_score=300
         self.lose_points= 75
         self.earn_points=100
-
-        #initialize two cards
-        for i in range(2):
-            card = Cards()
-            self.cards.append(card)
     
     """startgame()
     Initiate the loop which mantains the game running 
@@ -38,40 +32,46 @@ class Director:
         #startgame module Initialize the game.
         while self.is_playing:
             print()
-            print("The Card is:", self.cards[0].number)
+            print("The Card is:", self.cards.first_card().number)
             self.option = input("Higher or Lower? [h/l] ")
             
             #create next card different than the first
-            while self.cards[1].number == self.cards[0].number:
-                self.cards[1].get_card_num()
+            self.cards.check_different()
 
-            print("Next Card was:", self.cards[1].number)
+            print("Next Card was:", self.cards.second_card().number)
 
-            if self.cards[0].number < self.cards[1].number and self.option == 'h' or self.cards[0].number > self.cards[1].number and self.option == 'l':
+            if self.cards.is_higher() and self.option == 'h' or self.cards.is_higher() == False and self.option == 'l':
                 self.total_score+=self.earn_points
             else:
                 self.total_score-=self.lose_points
-            
+
             #no negative scores 
-            if self.total_score <= 0:
-                self.total_score = 0
+            self.no_negative_score()
 
             print("Your Score is:", self.total_score)
             if self.total_score <= 0:
-                self.check_if_lost("You lost!")
+                self.end_game("You lost!")
 
             #move next card to current card
-            self.cards[0] = copy.deepcopy(self.cards[1])
+            self.cards.move_card()
+
             continue_option = input("Play again? [y/n] ")
             if continue_option == "n":
-                self.check_if_lost("Thanks for playing!")
+                self.end_game("Thanks for playing!")
 
     """check_if_lost(string)
     Display a message and end game 
     """
-    def check_if_lost(self, message):
+    def end_game(self, message):
         print()
         print(message)
         time.sleep(3)
         self.is_playing = False
         exit()
+
+    """no_negative_score()
+    Avoid score going below zero 
+    """
+    def no_negative_score(self):
+        if self.total_score <= 0:
+            self.total_score = 0

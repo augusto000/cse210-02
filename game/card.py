@@ -1,6 +1,6 @@
 import random
 
-class Cards:
+class Card:
     """Simple number card 
     This class holds number of a card.
 
